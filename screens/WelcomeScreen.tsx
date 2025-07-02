@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { View, Text, StatusBar } from 'react-native';
+import { View, Text, StatusBar, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useAuth } from '../contexts/AuthContext';
@@ -35,12 +35,17 @@ export default function WelcomeScreen() {
         {/* Logo Container */}
         <View style={logoContainerStyle}>
           {/* App Logo - Wallet Icon */}
-          <View style={logoCircleStyle}>
+          <Image
+            source={require('../assets/flexifin.png')} // Replace with your logo path
+            style={{ width: 120, height: 120, borderRadius: 20, marginBottom: 24 }}
+            resizeMode="contain"
+          />
+          {/* <View style={logoCircleStyle}>
             <Icon name="wallet-outline" size={56} color="#ffffff" />
-          </View>
+          </View> */}
 
           {/* App Name */}
-          <Text style={appNameStyle}>FlexiFin</Text>
+          {/* <Text style={appNameStyle}>FlexiFin</Text> */}
           <Text style={taglineStyle}>Finance Made Flexible</Text>
         </View>
 
@@ -74,31 +79,31 @@ const logoContainerStyle = {
   marginBottom: 60,
 };
 
-const logoCircleStyle = {
-  width: 120,
-  height: 120,
-  borderRadius: 20,
-  backgroundColor: '#50C878',
-  justifyContent: 'center' as const,
-  alignItems: 'center' as const,
-  marginBottom: 24,
-  shadowColor: '#FFFFFF',
-  shadowOffset: { width: 0, height: 8 },
-  shadowOpacity: 0.3,
-  shadowRadius: 20,
-  elevation: 12,
-  borderWidth: 2,
-  borderColor: '#FFFFFF',
-};
+// const logoCircleStyle = {
+//   width: 120,
+//   height: 120,
+//   borderRadius: 20,
+//   backgroundColor: '#50C878',
+//   justifyContent: 'center' as const,
+//   alignItems: 'center' as const,
+//   marginBottom: 24,
+//   shadowColor: '#FFFFFF',
+//   shadowOffset: { width: 0, height: 8 },
+//   shadowOpacity: 0.3,
+//   shadowRadius: 20,
+//   elevation: 12,
+//   borderWidth: 2,
+//   borderColor: '#FFFFFF',
+// };
 
-const appNameStyle = {
-  fontSize: 32,
-  fontWeight: 'bold' as const,
-  color: '#ffffff',
-  letterSpacing: -0.5,
-  marginBottom: 8,
-  textAlign: 'center' as const,
-};
+// const appNameStyle = {
+//   fontSize: 32,
+//   fontWeight: 'bold' as const,
+//   color: '#ffffff',
+//   letterSpacing: -0.5,
+//   marginBottom: 8,
+//   textAlign: 'center' as const,
+// };
 
 const taglineStyle = {
   fontSize: 16,

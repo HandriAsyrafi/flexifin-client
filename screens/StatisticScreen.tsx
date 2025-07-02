@@ -311,7 +311,7 @@ export default function StatisticScreen() {
       <View
         style={{
           backgroundColor: '#FFFFFF',
-          paddingTop: 20,
+          paddingTop: 60,
           paddingHorizontal: 24,
           paddingBottom: 24,
           borderBottomLeftRadius: 28,

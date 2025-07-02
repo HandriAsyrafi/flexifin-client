@@ -176,7 +176,7 @@ const mainContainerStyle = {
 
 const headerContainerStyle = {
   backgroundColor: '#FFFFFF',
-  paddingTop: 20,
+  paddingTop: 60,
   paddingHorizontal: 20,
   paddingBottom: 22,
   borderBottomLeftRadius: 24,
