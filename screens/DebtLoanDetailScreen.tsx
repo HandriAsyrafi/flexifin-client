@@ -480,7 +480,7 @@ const screenBackgroundStyle = {
 
 const headerContainerStyle = {
   backgroundColor: '#FFFFFF',
-  paddingTop: 20,
+  paddingTop: 60,
   paddingHorizontal: 24,
   paddingBottom: 24,
   flexDirection: 'row' as const,
